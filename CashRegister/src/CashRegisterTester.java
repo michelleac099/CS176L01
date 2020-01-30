@@ -16,12 +16,13 @@ public class CashRegisterTester {
 			testRegister.recordPurchase(amountEntered);
 			
 		}//payment loop
-			
-		System.out.println("Enter payment: ");
+		
+		System.out.print("Enter payment: ");
 		testRegister.receivePayment(in.nextDouble());
 		
-		System.out.println("Your change: ");
-		System.out.print(testRegister.giveChange());
+		double change = testRegister.giveChange();
+		System.out.print("Your change: ");
+		System.out.printf("%.2f", change);
 		
 		in.close();
 		
