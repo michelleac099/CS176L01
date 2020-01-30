@@ -12,17 +12,18 @@ public class CashRegisterTester {
 			System.out.print("Enter a purchase amount or -1 to quit: ");
 			amountEntered = in.nextDouble();
 			if (amountEntered == -1)
-				sentinel=false;
+				break;
 			testRegister.recordPurchase(amountEntered);
+			
+		}//payment loop
 			
 		System.out.println("Enter payment: ");
 		testRegister.receivePayment(in.nextDouble());
 		
 		System.out.println("Your change: ");
 		System.out.print(testRegister.giveChange());
-
-		}//payment loop
-			
+		
+		in.close();
 		
 	}//main
 

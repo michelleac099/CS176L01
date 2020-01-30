@@ -22,7 +22,7 @@ public class CashRegister {
 	   
 	   public double giveChange()
 	   {
-		   return purchase - payment;
+		   return payment - purchase;
 	   }
 	
 	
